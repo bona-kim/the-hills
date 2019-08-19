@@ -10,6 +10,21 @@
 // You will have time to focus on it later.
 
 (function() {
+    var check = false;
+    while (check === false) {
+        var age = prompt("How old are you?");
+        var gender = prompt("What is your gender?");
+        var town = prompt("Where do you live?");
+
+        check = confirm("You are " + age + "years old. \n"
+            + "You are " + gender + ". \n"
+            + "You live in " + town
+            + ". \n\n Are these correct?");
+    }
+        window.alert("Thanks for your confirmation :) ");
+
+
+
 
     // your code here
 

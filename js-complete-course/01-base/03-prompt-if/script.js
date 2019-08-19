@@ -10,6 +10,12 @@
 // You will have time to focus on it later.
 
 (function() {
+    let answer = prompt("Do you want some cake?");
+    if ( answer === "yes" ) {
+        window.alert("Congratulation!");
+    } else {
+        window.alert("More cake for me then :p!");
+    }
 
   // your code here
 
