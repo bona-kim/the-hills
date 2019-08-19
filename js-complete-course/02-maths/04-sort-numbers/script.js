@@ -16,6 +16,14 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
+        let numbers = document.getElementById("numbers").value;
+        let numArr = numbers.split(',');
+        //console.log(numArr);
+
+        numArr = numArr.sort(function(a, b){return a-b});
+        //console.log(numArr);
+
+        window.alert(numArr);
 
     });
 

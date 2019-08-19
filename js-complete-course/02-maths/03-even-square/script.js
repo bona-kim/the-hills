@@ -14,7 +14,16 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
+        console.log("hoi");
+
+        let i;
+        for (i = 1; i*i <22; i++){
+            let sqrNr = i * i;
+            window.alert(sqrNr);
+        }
 
     });
 
 })();
+
+// 1, 4, 9, 16,

@@ -15,7 +15,19 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        // get the input number
+        let number = document.getElementById("number").value;
+        //console.log(number);
+
+        // calculate its factorial
+        let result = ;
+        for (let i=1; i< number+1; i++){
+
+        }
+
+
+
+
 
     });
 

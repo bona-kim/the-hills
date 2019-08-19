@@ -13,7 +13,30 @@
     // to get the value of an input: document.getElementById("element-id").value
 
     var performOperation = function(operation) {
+
+        let one = parseInt(document.getElementById("op-one").value);
+        let two = parseInt(document.getElementById("op-two").value);
+
         // perform the operation
+        switch(operation){
+            case 'addition':
+                alert(one+two);
+                break;
+            case 'substraction':
+                alert(one-two);
+                break;
+            case 'multiplication':
+                alert(one*two);
+                break;
+            case 'division':
+                alert(one/two);
+                break;
+            default:
+                alert("Please choose one of +,-,*,/ .")
+
+        }
+
+
     };
 
     Array.from(document.querySelectorAll("button.operator")).forEach(function($btn) {
