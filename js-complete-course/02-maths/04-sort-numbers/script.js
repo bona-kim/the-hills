@@ -17,8 +17,9 @@
 
         // your code here
         let numbers = document.getElementById("numbers").value;
+        //console.log(numbers + typeof(numbers));
         let numArr = numbers.split(',');
-        //console.log(numArr);
+        console.log(numArr);
 
         numArr = numArr.sort(function(a, b){return a-b});
         //console.log(numArr);

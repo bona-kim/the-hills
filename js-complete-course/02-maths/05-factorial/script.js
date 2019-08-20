@@ -16,16 +16,18 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // get the input number
-        let number = document.getElementById("number").value;
+        let number = parseInt(document.getElementById("number").value);
         //console.log(number);
 
         // calculate its factorial
-        let result = ;
-        for (let i=1; i< number+1; i++){
-
+        let result=1;                     // set result = 1 first.
+        for (let i=2; i < number+1; ++i){ // from 1 to the input nr
+            //console.log(i);
+            result = result * i           // multiply by numbers
         }
 
-
+        // show the result
+        window.alert(result);
 
 
 

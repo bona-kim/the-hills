@@ -13,6 +13,16 @@
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
-    // your code here
+    // get current time
+    var today = new Date();
+    var time = (today.getHours()).toString() + (today.getMinutes()).toString();
+    console.log(time); // time with 'hhmm' format. (0000 to 2399)
+
+    if (time < 1800) { // before 0-18h   0000 - 1800
+        document.getElementById("target").innerHTML = "Hello";
+    } else {          // after 18h-     1801  2399
+        document.getElementById("target").innerHTML = "Good evening";
+    }
+
 
 })();
