@@ -11,6 +11,29 @@
 
 (function() {
 
-    // your code here
+    function changeBackground(color){
+        document.body.style.background = color;
+    }
+
+    document.getElementById("red").addEventListener("click", function() {
+        // change the background color
+        changeBackground('red')
+    });
+
+    document.getElementById("green").addEventListener("click", function() {
+        // change the background color
+        changeBackground('green')
+    });
+
+    document.getElementById("yellow").addEventListener("click", function() {
+        // change the background color
+        changeBackground('yellow')
+    });
+
+    document.getElementById("blue").addEventListener("click", function() {
+        // change the background color
+        changeBackground('blue')
+    });
+
 
 })();

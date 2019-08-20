@@ -11,6 +11,12 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        // get the input value
+        let color = document.getElementById("color").value;
+        console.log(color + typeof(color));
+        // change the background color
+        document.body.style.background = color;
+    });
 
 })();

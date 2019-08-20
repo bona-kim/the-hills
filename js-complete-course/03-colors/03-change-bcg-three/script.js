@@ -11,6 +11,17 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        // generate a random color
+        let randomColor = 'rgb('+ Math.floor(Math.random() * 256)
+                           +', '+ Math.floor(Math.random() * 256)
+                           +', '+ Math.floor(Math.random() * 256) +')';
+        console.log(randomColor + typeof(randomColor));
+        // use the random color qs the background.
+        document.body.style.background = randomColor;
+    });
+
+
+
 
 })();
