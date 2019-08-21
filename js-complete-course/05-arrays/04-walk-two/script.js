@@ -26,6 +26,24 @@
         "cerise",
     ];
 
-    // your code here
+    // When you click the button,
+    document.getElementById("run").addEventListener("click", function() {
+
+        // display in the console, one after the other (use a forEach)
+
+        let together = "";
+
+        fruits.forEach(myFunction);
+
+        function myFunction(item) {
+            together += " " + item
+        }
+
+        console.log(together);
+        alert(together)
+
+
+
+    });
 
 })();

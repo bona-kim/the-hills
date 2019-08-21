@@ -27,5 +27,19 @@
     ];
 
     // your code here
+    // When you click the button,
+    document.getElementById("run").addEventListener("click", function() {
+
+        // display in the console, one after the other (use a loop)
+        let together ="";
+        for(let i =0; i<fruits.length; i++){
+            console.log(fruits[i]);
+            together += " " + fruits[i];
+        }
+
+        console.log(together);
+        alert(together)
+
+    });
 
 })();
