@@ -44,4 +44,5 @@
             performOperation($btn.id);
         });
     });
+
 })();
