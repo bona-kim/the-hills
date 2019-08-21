@@ -18,20 +18,32 @@
         //console.log(year)
 
         let d = new Date();
-        //console.log(d);
         d.setFullYear(year, 0, 13);
+        /*
         //console.log(d);
 
-        let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "November", "December"];
+        //console.log(d);
 
-        for(i=0; i < 12; i++){
-            if(d.setMonth()){
+        d.setMonth(1);
+        //console.log(d);
+        //console.log(d.getDay());
+        */
 
+        let months = ["January", "February", "March", "April",
+                      "May", "June", "July", "August",
+                      "September", "October", "November", "December"];
+
+        // check whether 13th of each month is friday
+        let specialMonths = [];
+        for(let i=0; i < 12; i++){
+            d.setMonth(i);
+            if(d.getDay()===5){
+                specialMonths.push(months[i]);
             }
         }
-
-
-
+        // display months which have a Friday 13th
+        console.log(specialMonths);
+        window.alert(specialMonths);
 
 
 
