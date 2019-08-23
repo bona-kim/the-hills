@@ -11,7 +11,7 @@
 
 (function() {
 
-    var people = [
+    const people = [
         {
             firstname: "Bradford",
             lastname: "Coldbath",
@@ -90,5 +90,23 @@
     ];
 
     // your code here
+
+    // When you click the button,
+    document.getElementById("run").addEventListener("click", function() {
+
+        // check all the person in array people (run myFunction with every person)
+        people.forEach(function (item) {
+            console.log();
+            // whether his lastname is "Dupont" and firstname is "Jean"
+            if ( item.firstname === "Jean" && item.lastname === "Dupont" ) {
+                // display in the console the mail address of the person
+                console.log(item.email);
+                // display the index of him
+                alert(people.indexOf(item));
+            }
+        });
+    });
+
+
 
 })();
