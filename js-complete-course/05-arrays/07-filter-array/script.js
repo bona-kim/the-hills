@@ -94,9 +94,20 @@
     // When you click the button,
     document.getElementById("run").addEventListener("click", function() {
 
-        // Create empty array for 18+
-        let adults = [];
+        // this function checks the item's age if it is 18+
+        function checkAdult(item){
+            return item.age >= 18;
+        }
 
+        // Create an array for 18+
+        // with using the 'checkAdult' function as a 'filter' to array 'people'
+        let adults = people.filter(checkAdult);
+
+        // Display the resulting array in the console.
+        console.log(adults)
+
+
+        /* // Another way (not using filter)
         // check all the person in array people (run myFunction with every person)
         people.forEach(function(person) {
             // if the person's age is more than 18
@@ -107,6 +118,8 @@
 
         // Display the resulting array in the console.
         console.log(adults)
+
+         */
 
     });
 })();
