@@ -13,7 +13,7 @@
 
     var people = [
         {
-            firstname: "Garald",
+            firstname: "Garald",         // people[0][firstname]
             lastname: "Freschi",
             email: "gfreschi0@discuz.net",
         },
@@ -45,23 +45,21 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // display in the console, one after the other (use a forEach)
+        let nameTogether = "";
 
-        let together = "";
-
-        fruits.forEach(myFunction);
+        people.forEach(myFunction);
 
         function myFunction(item) {
-            together += " " + item
+            nameTogether += " " + item["firstname"]
         }
 
         // remove not necessary first white space
-        together = together.slice(1);
+        nameTogether = nameTogether.slice(1);
 
         // display the result
-        console.log(together);
-        alert(together)
-
-
+        console.log(nameTogether);
+        alert(nameTogether)
+        
 
     });
 
