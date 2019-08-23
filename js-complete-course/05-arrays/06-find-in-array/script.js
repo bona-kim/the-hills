@@ -95,14 +95,14 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // check all the person in array people (run myFunction with every person)
-        people.forEach(function (item) {
+        people.forEach(function(person) {
             console.log();
             // whether his lastname is "Dupont" and firstname is "Jean"
-            if ( item.firstname === "Jean" && item.lastname === "Dupont" ) {
+            if ( person.firstname === "Jean" && person.lastname === "Dupont" ) {
                 // display in the console the mail address of the person
-                console.log(item.email);
+                console.log(person.email);
                 // display the index of him
-                alert(people.indexOf(item));
+                alert(people.indexOf(person));
             }
         });
     });
