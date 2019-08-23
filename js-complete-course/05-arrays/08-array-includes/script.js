@@ -26,6 +26,15 @@
         "cerise",
     ];
 
-    // your code here
+    // When you click the button,
+    document.getElementById("run").addEventListener("click", function() {
+
+        // Check there is an apple in the array fruit,
+        if (fruits.includes("apple")) {   // if apple is there)
+            console.log("yes");           // Say yes or no in console
+        } else {                          // if apple is not there
+            console.log("no")             // Say yes or no in console
+        }
+    });
 
 })();
