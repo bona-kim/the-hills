@@ -31,12 +31,20 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // display in the console, one after the other (use a loop)
+
+        // make empty character
         let together ="";
+
+        // add every fruit in fruits with the white space before
         for(let i =0; i<fruits.length; i++){
             console.log(fruits[i]);
             together += " " + fruits[i];
         }
 
+        // remove not necessary first white space
+        together = together.slice(1);
+
+        // display the result
         console.log(together);
         alert(together)
 
