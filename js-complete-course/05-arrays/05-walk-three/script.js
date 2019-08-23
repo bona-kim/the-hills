@@ -41,4 +41,28 @@
 
     // your code here
 
+    // When you click the button,
+    document.getElementById("run").addEventListener("click", function() {
+
+        // display in the console, one after the other (use a forEach)
+
+        let together = "";
+
+        fruits.forEach(myFunction);
+
+        function myFunction(item) {
+            together += " " + item
+        }
+
+        // remove not necessary first white space
+        together = together.slice(1);
+
+        // display the result
+        console.log(together);
+        alert(together)
+
+
+
+    });
+
 })();

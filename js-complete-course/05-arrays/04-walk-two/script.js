@@ -39,8 +39,13 @@
             together += " " + item
         }
 
+        // remove unnecessary first white space
+        together = together.slice(1);
+
+        // display the result
         console.log(together);
-        alert(together)
+        alert(together);
+
 
 
 

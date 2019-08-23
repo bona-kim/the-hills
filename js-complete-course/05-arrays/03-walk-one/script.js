@@ -41,7 +41,7 @@
             together += " " + fruits[i];
         }
 
-        // remove not necessary first white space
+        // remove unnecessary first white space
         together = together.slice(1);
 
         // display the result
