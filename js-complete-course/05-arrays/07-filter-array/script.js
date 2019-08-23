@@ -91,4 +91,22 @@
 
     // your code here
 
+    // When you click the button,
+    document.getElementById("run").addEventListener("click", function() {
+
+        // Create empty array for 18+
+        let adults = [];
+
+        // check all the person in array people (run myFunction with every person)
+        people.forEach(function(person) {
+            // if the person's age is more than 18
+            if ( person.age >= 18) {
+                adults.push(person)   // put the person in adults array
+            }
+        });
+
+        // Display the resulting array in the console.
+        console.log(adults)
+
+    });
 })();
