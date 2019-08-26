@@ -11,6 +11,13 @@
 
 (function() {
 
-    // your code here
+    // select all the targets and put them in var targets
+    let targets = document.querySelectorAll(".target");
+
+    // change the content for every target
+    targets.forEach(element => {
+        element.innerHTML = "owned";
+    });
+
 
 })();
