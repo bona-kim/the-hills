@@ -89,6 +89,28 @@
         },
     ];
 
-    // your code here
+    // When you click the button
+    document.getElementById("run").addEventListener("click", function() {
+
+        // total of the person's ages using the reduce method
+        let ageSum = people.reduce((accumulator, people) => {
+            return accumulator + people.age
+        }, 0);
+
+        // display in the console & alert
+        console.log(ageSum);
+        alert(ageSum)
+
+
+        /*
+        A closer look on array.reduce() with useful examples
+        https://medium.com/front-end-weekly/a-closer-look-on-array-reduce-with-useful-examples-34f222664e66
+        */
+
+
+
+
+    });
+
 
 })();
