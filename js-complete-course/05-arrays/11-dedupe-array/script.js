@@ -28,6 +28,23 @@
         "cerise",
     ];
 
-    // your code here
+
+    // When you click the button
+    document.getElementById("run").addEventListener("click", function() {
+
+        let unique =[... new Set(fruits)];
+        console.log(unique)
+
+
+        /*
+        Good ref
+        JavaScript: Remove Duplicates from an Array
+        https://wsvincent.com/javascript-remove-duplicates-array/#targetText=JavaScript%3A%20Remove%20Duplicates%20from%20an%20Array&targetText=There%20are%20multiple%20ways%20to,automatically%20remove%20duplicates%20for%20us.
+        */
+
+
+
+
+    });
 
 })();
