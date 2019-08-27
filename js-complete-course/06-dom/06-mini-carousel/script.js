@@ -11,7 +11,9 @@
 
 (function() {
 
-    var gallery= [
+    document.getElementById("next").addEventListener("click", function() {
+
+        var gallery= [
         "../../_shared/img/bell.svg",
         "../../_shared/img/clock.svg",
         "../../_shared/img/compass.svg",
@@ -19,6 +21,27 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+    // put the element for carousel in a variable
+    let carousel = document.getElementsByTagName("img")[0];
+
+    // get the src value of the current image
+    let src = carousel.getAttribute("src");
+    //console.log(src + " " + typeof(src));
+
+    // check the index for the crr src in gallery array
+    let srcIndex = gallery.indexOf(src);
+    console.log(srcIndex+ " " + typeof(srcIndex));
+
+    // set the index for the next image
+    if(srcIndex === gallery.length-1) { // If the cur src is the last one in the array
+        srcIndex = 0;                   // set the index with 0 (to go to the first img°
+    } else {                            // otherwise
+        srcIndex += 1
+    }
+
+    // change the src with the newIndex
+    carousel.setAttribute("src", gallery[srcIndex] );
+    });
+
 
 })();
