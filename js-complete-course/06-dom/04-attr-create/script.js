@@ -24,9 +24,12 @@
     //console.log(document.getElementById("target"))
 
     // Then remove the original element.
+    document.getElementById("source").remove();
+    /*
+    old way
     let byeBye = document.getElementById("source");
     byeBye.parentNode.removeChild(byeBye);
-
+    */
 
 
 
