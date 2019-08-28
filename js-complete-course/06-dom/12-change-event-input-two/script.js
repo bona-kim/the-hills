@@ -11,6 +11,24 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("pass-one").addEventListener("input", detectInput);
+
+    let input = document.getElementById("pass-one");
+    let validity = document.getElementById("validity");
+
+    function detectInput() {
+        if (validator() === true){
+            validity.innerHTML = "ok";
+        } else {
+            validity.innerHTML = "not ok";
+            validity.classList.add("error");
+        }
+    }
+
+    function validator() {
+        let atLeastTwoDigits = new RegExp("[0-9].*[0-9]");
+        // at least 8 characters long and contains at least two numbers
+        return (input.value.length >= 8) && (atLeastTwoDigits.test(input.value))
+    }
 
 })();
