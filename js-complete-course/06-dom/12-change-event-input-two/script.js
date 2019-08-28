@@ -21,7 +21,6 @@
             validity.innerHTML = "ok";
         } else {
             validity.innerHTML = "not ok";
-            validity.classList.add("error");
         }
     }
 
