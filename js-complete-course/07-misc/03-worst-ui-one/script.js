@@ -11,6 +11,23 @@
 
 (function() {
 
-    // your code here
+    // If input is changed, run the function detectInput
+    document.getElementById("slider").addEventListener("input", detectInput);
+
+
+    function detectInput() {
+
+        let rangeInput = document.getElementById("slider").value;
+
+        // change the value attr of the slider
+        document.getElementById("slider").setAttribute("value",rangeInput);
+
+        // display the phone number with a leading 0 in the target paragraph
+        document.getElementById("target").innerHTML = "0" +rangeInput;
+    }
+
+
+
+
 
 })();
