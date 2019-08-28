@@ -11,6 +11,14 @@
 
 (function() {
 
-    // your code here
+    // let numbers goes up automatically
+
+
+    // if the stop buttons are clicked, the number is fixed
+
+
+    // display the number on the top
+
+
 
 })();
