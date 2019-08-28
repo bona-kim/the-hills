@@ -9,23 +9,17 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     // your code here
-    document.getElementById("pass-one").addEventListener("input", detectInput);
 
+    let input = document.getElementById("pass-one");
+    let counter = document.getElementById("counter");
 
-    function detectInput() {
+    input.setAttribute("maxlength", "10");
 
-        let input = document.getElementById("pass-one").value;
-        let counter = document.getElementById("counter");
-
-        if (input.length === 10){
-            counter.innerHTML = input.length;
-            input = document.getElementById("pass-one").setAttribute("maxlength",10);
-        } else {
-            counter.innerHTML = input.length;
-        }
-    }
+    input.addEventListener("input", function () {
+        counter.innerHTML = input.value.length + "/10";
+    });
 
 })();
