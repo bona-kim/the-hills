@@ -12,5 +12,20 @@
 (function() {
 
     // your code here
+    document.getElementById("pass-one").addEventListener("input", detectInput);
+
+
+    function detectInput() {
+
+        let input = document.getElementById("pass-one").value;
+        let counter = document.getElementById("counter");
+
+        if (input.length === 10){
+            counter.innerHTML = input.length;
+            input = document.getElementById("pass-one").setAttribute("maxlength",10);
+        } else {
+            counter.innerHTML = input.length;
+        }
+    }
 
 })();
