@@ -10,25 +10,7 @@
 // You will have time to focus on it later.
 
 (function() {
-    /*
-    var letterContainer = document.querySelector("#target");
-    var letters = letterContainer.innerText;
 
-    letters = letters.split("");
-    letterContainer.innerText = "";
-    var offset = 0;
-
-    letters.forEach(function(letter, i){
-        var wrap = document.createElement("span");
-        wrap.innerText = letter;
-        wrap.style.position = "relative";
-        wrap.style.bottom = i+"px";
-        wrap.style.transform = "rotate("+-i+"deg)";
-        letterContainer.appendChild(wrap);
-    })
-
-    */
-    // your code here
     let textElement = document.querySelector("#target");
     let text = textElement.innerText;
 
