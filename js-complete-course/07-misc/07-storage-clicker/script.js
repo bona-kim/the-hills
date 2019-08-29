@@ -11,6 +11,25 @@
 
 (function() {
 
+    document.getElementById("increment").addEventListener("click", clickCounter);
+
+    console.log("clicked");
+
+
+    function clickCounter() {
+        if(typeof(Storage) !== "undefined") {
+            if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount)+1;
+            } else {
+                localStorage.clickcount = 1;
+            }
+            localStorage.setItem("myClick",localStorage.clickcount);
+            document.getElementById("target").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+        } else {
+            document.getElementById("target").innerHTML = "Sorry, your browser does not support web storage...";
+        }
+    }
+
     // your code here
 
 })();
