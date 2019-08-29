@@ -16,71 +16,22 @@
     // appear one after the other.
     // Use a random delay between each letter appearing.
 
-    let container = document.getElementById("target");
-    console.log(container);
+    let i = 0;
+    let text = document.getElementById("target").innerText;
+    //console.log(text)
+    let speed = 30;
+    document.getElementById("target").innerHTML="";
 
-    let letters = [container.innerText];
-    console.log(letters);
-    let t = -1;
-    let letter = "";
-    let message = container.innerHTML;
-    let mode = 'write';
-    let delay = 1000;
-
-    function updateText(txt) {
-        container.innerHTML = txt;
+    function typewriter(){
+        if (i < text.length){
+            document.getElementById("target").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typewriter, speed);
+        }
     }
 
-    function tick(){
-        if(container.innerHTML.length === 0){
-            t++;
-            letter = letter[t];
-            message = "";
-            mode = "write";
-        }
+    typewriter();
 
-        switch(mode) {
-            case "write" :
-                message += letter.slice(0,1);
-                letter = letter.substr(1);
-                updateText(message);
-
-                if(letter.length === 0 && t === (letters.length - 1)) {
-                    window.clearTimeout(timeout);
-                    return;
-                }
-
-                if(letter.length === 0){
-                    mode = 'delete';
-                    delay = 1500;
-                } else {
-                    delay = 32 + Math.round(Math.random() * 40);
-                }
-
-                break;
-
-            case 'delete' :
-                message = message.slice(0, -1);
-                updateText(message);
-
-                if(message.length === 0)
-                {
-                    mode = 'write';
-                    delay = 1500;
-                } else {
-                    delay = 32 + Math.round(Math.random() * 100);
-                }
-                break;
-
-
-        }
-
-        timeout = window.setTimeout(tick, delay);
-
-    }
-
-
-    let timeout = window.setTimeout(tick, delay);
 
 })();
 
