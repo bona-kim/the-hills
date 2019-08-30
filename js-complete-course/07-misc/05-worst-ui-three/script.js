@@ -9,81 +9,71 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    const slots = document.querySelectorAll("input");
-    const result = document.getElementById("target");
-    const buttons = document.querySelectorAll("button");
+    // declare the necessary variables
+    const result = document.getElementById("target");   // element for display whole number
+    const slots = document.querySelectorAll("input");    // 4slot for part of number
+    const buttons = document.querySelectorAll("button"); // all the stop buttons
 
+    // separate the displayed numbers in + and 4part
+    let number = ["460", "00", "00", "00"];
+    result.innerHTML = "+" + number[0] + number[1] + number[2] + number[3];
+
+    // create a new array with the result of MySlot for every array element(slots)
     var buttonReferences = Array.from(slots).map(mySlots);
     console.log('buttonReferences', buttonReferences);
 
-    // let numbers goes up automatically
-    function mySlots(slot, i){
+    // let number in a slot goes up automatically
+    function mySlots(slot, i) {
+        // take the min&max num
         let minNr = Number(slot.getAttribute("data-min"));
         let maxNr = Number(slot.getAttribute("data-max"));
-
-        console.log(minNr + maxNr);
+        // set the default for number with minNr
         let num = minNr;
-
+        // for a leading 0
         let sliceNr;
-        if (i === 0){ sliceNr = -3; } else { sliceNr = -2; }
+        if (i === 0) {
+            sliceNr = -3;
+        } else {
+            sliceNr = -2;
+        }
 
-        function increaseNum(){
-            if (num < maxNr){
+        // Increase number till number = maxNr
+        function increaseNum() {
+            if (num < maxNr) {
                 num++;
-                let nrWithZero = ("0"+num).slice(sliceNr).toString();
-                slot.setAttribute("value", nrWithZero);
+                let nrWithZero = ("0" + num).slice(sliceNr).toString(); // change the number with a leading 0
+                slot.setAttribute("value", nrWithZero); // set the new number in the slot
+            } else {
+                num = minNr;    // if num reaches to maxNr, reset the number with minNR
             }
         }
 
+        // Keep running the function increaseNumber every 0.2 seconds°
         return setInterval(increaseNum, 200);
+
     }
 
-
+    // for all 4 button; run the function myButtons
     buttons.forEach(myButtons);
 
-    // if the stop buttons are clicked, the number is fixed
-    function myButtons(button, i){
-        button.addEventListener("click",function(){
-            console.log(slots[i].value);
-            slots[i].setAttribute("value", slots[i].value);
+    function myButtons(button, i) {
+        // if the stop buttons are clicked,
+        button.addEventListener("click", function () {
+            // the number is fixed
             clearInterval(buttonReferences[i]);
-
-            switch(i) {
-                case 0:
-                    // code block
-                    break;
-                case 1:
-                    // code block
-                    break;
-                case 2:
-                    // code block
-                    break;
-                case 3:
-                    // code block
-                    break;
-                default:
-                // code block
-            }
-            result.innerHTML = "+" + slots[0].value + slots[1].value
-                                   + slots[2].value + slots[3].value
-
+            // take the fixed number and set the attr with that
+            slots[i].setAttribute("value", slots[i].value);
+            // change the value for display
+            number[i] = slots[i].value;
+            // display the phone number
+            result.innerHTML = "+" + number[0] + number[1]
+                + number[2] + number[3];
         });
 
 
     }
-
-
-
-
-
-
-
-
-
-    // display the number on the top
-
 
 
 })();
