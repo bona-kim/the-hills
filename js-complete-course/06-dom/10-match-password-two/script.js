@@ -9,34 +9,20 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     document.getElementById("run").addEventListener("click", function () {
 
+        // take all passwords input
         let passwords = document.querySelectorAll("input");
-        // console.log(passwords,typeof(passwords));
-        let passOne = document.getElementById("pass-one").value;
-        let passTwo = document.getElementById("pass-two").value;
 
+        // reset by every click
         passwords.forEach(password => password.classList.remove("error"));
 
-        if (passOne !== passTwo || passOne === ""){
+        // both passwords are different OR empty -> add class "error"
+        if (passwords[0].value !== passwords[1].value || passwords[0].value === "") {
             passwords.forEach(password => password.classList.add("error"))
         }
-
-
-        /*
-        // Get the 2 input password
-        let passOne = document.getElementById("pass-one");
-        let passTwo = document.getElementById("pass-two");
-
-        // If they are not same, change the border color of the input boxes to be red
-        if (passOne.value !== passTwo.value) {
-            passOne.classList.add("error");
-            passTwo.classList.add("error");
-        }
-
-         */
 
     })
 
