@@ -12,17 +12,15 @@
 (() => {
 
     // If the button is clicked
-    document.getElementById("run").addEventListener("click", function(){
-
+    document.getElementById("run").addEventListener("click", function () {
 
         // ask json file to the server and then Once it is ready,
         fetch('http://localhost:63342/the-hills/js-complete-course/_shared/api.json')
 
         // get the json. Once it is done,
-            .then(function(response){
+            .then(function (response) {
                 return response.json()
             })
-
 
             // run the function
             .then(function (data) {
@@ -37,7 +35,7 @@
                 // create a new hero array
                 let newHero = {};
 
-                newHero['id'] = data.heroes.length +1;  // id : lengte of the data.hero + 1 //newHero.id = data.heroes.length +1
+                newHero['id'] = data.heroes.length + 1;  // id : lengte of the data.hero + 1 //newHero.id = data.heroes.length +1
                 newHero['name'] = inputName;            // name : inputName
                 newHero['alterEgo'] = inputAlterEgo;    // Alter-Ego : inputAlterEgo
                 newHero['abilities'] = [];              // prepare the array for abilities
@@ -45,17 +43,12 @@
                 // console.log(newHero);
                 data.heroes.push(newHero);              // put the New hero in a original array
                 // console.log(data);
-                // console.log(data.heroes);
+
+                // Display the result of your query in the console.
+                console.log(data.heroes);
 
             });
 
-
     });
-
-
-
-
-
-
 
 })();
