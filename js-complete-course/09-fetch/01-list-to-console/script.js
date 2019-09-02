@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    // If the button is clicked
+    document.getElementById("run").addEventListener("click", function(){
+        // ask json file to the server and then Once it is ready, run the function
+        fetch('http://localhost:63342/the-hills/js-complete-course/_shared/api.json').then(function(response){
+            // to get the text in it. Once it is done, run the function with the text
+            response.json().then(function (data) {
+                // display the data in the console,
+                console.log(data);
+            })
+        })
+    });
+
 })();
