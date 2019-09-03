@@ -10,5 +10,23 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    // At the click of the button,
+    document.getElementById("run").addEventListener("click", function(){
+        console.log("clicked");
+        // call the getPersons function
+        window.lib.getPersons(function(error, people) {
+            if(people == undefined){
+                console.error("no people here!");
+            } else {
+                console.log(people);
+            }
+
+        })
+
+
+
+    })
+
+
 })();
