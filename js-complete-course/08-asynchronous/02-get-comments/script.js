@@ -10,5 +10,32 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
-})();
+
+    // At the click of the button,
+    document.getElementById("run").addEventListener("click", function(){
+
+        // call the getPosts function
+        window.lib.getPosts(function(error, articles) {
+            let articlesAll = articles;     // assign all articles to var articlesAll
+            //console.log("Before", JSON.stringify(articles)); // keep original ver to compare with the result
+
+            // for every article in articleAll do this
+            articlesAll.forEach(function (article) {
+                    // call the getComments function
+                    window.lib.getComments(null, function (error, comments) {
+                        // if there is a comment for the article with that id
+                        if(undefined !== comments[article.id]) {
+                            //add the comment property on that article(array)
+                            article.comment = comments[article.id];
+                        }
+                    });
+            });
+
+            // afterwards display items in the console
+            console.log("The result", articlesAll);
+
+        })
+
+        })
+
+    })();
