@@ -10,5 +10,18 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    // callback function to be used as a callback parameter.
+    function myCallback(error, articles) {  // has two parameter
+        console.log(articles);              // display the i
+    }
+
+    // At the click of the button,
+    document.getElementById("run").addEventListener("click", function(){
+        // call the getPosts function
+        window.lib.getPosts(function(error, articles){
+            // display the items obtained in the console
+            console.log(articles);
+        })
+    })
+
 })();
