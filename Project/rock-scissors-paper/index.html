@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock-Scissors-Paper</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<header>
+    <h1>Rock-scissors-paper game</h1>
+</header>
+<section id="common">
+    <!-- Must : Let the player know they won (no alert box)-->
+    <!-- Must : Have a reset button-->
+    <p id="result">Hey, let's play the game right now!</p>
+    <button type="reset" id="reset">RESET</button>
+</section>
+<div class="container">
+    <!-- Must : Have three buttons that the player can press to change their pick-->
+    <section id="player">
+        <section class="buttons">
+            <button type="button" class="usr-btn" id="user-rock" value="rock">Rock</button>
+            <button type="button" class="usr-btn" id="user-scissors" value="scissors">Scissors</button>
+            <button type="button" class="usr-btn" id="user-paper" value="paper">Paper</button>
+        </section>
+        <img id="user-pic" src="image/rock-scissors-paper.png" alt="player's pick">
+    </section>
+
+    <!-- Must : Have another button to let the computer pick one and show the winner-->
+    <section id="computer">
+        <section class="buttons">
+            <button type="button" id="com-pick">Computer's pick</button>
+        </section>
+
+        <img id="com-pic" src="image/rock-scissors-paper.png" alt="computer's pick">
+    </section>
+</div>
+
+
+
+
+
+<!-- Nice : Nice graphics-->
+<!-- Nice : Let the player input using a text field-->
+<!-- Nice : Show what the player picked by highlighting the correct button-->
+<!-- Nice : Add more options (spock, ...)-->
+<!-- Nice : Add even more options (but avoid using 100 if statements)-->
+<!-- Nice : Add complex rules-->
+
+</body>
+</html>

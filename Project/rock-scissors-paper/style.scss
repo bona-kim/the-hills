@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Chewy|Kaushan+Script|Lacquer&display=swap');
+
+
+//$font1:'Kaushan Script', cursive;
+//$font2:'Lacquer', sans-serif;
+//$font3:'Chewy', cursive;
+
+//My Pallette
+$lv4 : #247BA0; //Lapis Lazuli
+$lv3 : #70C1B3; //Green Sheen
+$lv2 : #B2DBBF; //Sea Foam green
+$lv1 : #F3FFBD; //Very Pale Yellow
+$point : #FF1654; //Awesome
+
+
+body {
+  border: 5px solid $lv4;
+  border-radius: 30px;
+  width: 98vw;
+  //font: 100% Helvetica, sans-serif;
+  color: #333;
+
+  header {
+    border-radius: 30px 30px 0 0;
+    height: 20%;
+    background: $lv3;
+    padding: 3rem;
+
+    h1 {
+      font-family: 'Chewy', cursive;
+      color: $lv4;
+      margin: 0;
+      text-align: center;
+      font-size: 3rem;
+    }
+  }
+
+  #common {
+    padding: 1rem;
+    text-align: center;
+    background-color: $lv2;
+
+    p {
+      font-family: 'Chewy', cursive;
+      font-size: 1.5rem;
+      margin: 10px;
+      color: $point;
+    }
+
+    button {
+      font-family: 'Chewy', cursive;
+      background-color: $lv4;
+      border: none;
+      color: $lv1;
+      padding: 5px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 30px;
+      font-size: 1.2rem;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    background-color: $lv1;
+    border-radius: 0 0 30px 30px;
+    margin: 0 auto;
+
+    section{
+      width: 50%;
+      margin:5px;
+      border-radius: 40px;
+
+      img {
+        width: 100%;
+      }
+
+      .buttons {
+        padding: 1rem 0;
+        text-align: center;
+        width: 100%;
+    }
+  }
+
+  section {
+      button {
+        font-family: 'Chewy', cursive;
+        background-color: $lv4;
+        border: none;
+        color: $lv1;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 30px;
+        font-size: 1.2rem;
+      }
+    }
+
+  }
+
+}
