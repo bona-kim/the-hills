@@ -42,10 +42,12 @@ window.addEventListener("load", function(){
             (usrPick === "paper" && comPick === "rock")
         ) {
             document.getElementById("result").innerHTML = "You win!";
-            document.getElementById("player").style.background = "#FF1654";
+            document.getElementById("player").style.background = "#90ff2f";
+            document.getElementById("computer").style.background = "#FF1654";
         } else {
             document.getElementById("result").innerHTML = "Computer wins!";
-            document.getElementById("computer").style.background = "#FF1654";
+            document.getElementById("computer").style.background = "#90ff2f";
+            document.getElementById("player").style.background = "#FF1654";
         }
 
         document.getElementById("com-pick").disabled = true;
