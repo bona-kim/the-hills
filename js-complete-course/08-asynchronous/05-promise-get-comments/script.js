@@ -10,5 +10,33 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    // At the click of the button,
+
+    let articleAll;
+    document.getElementById("run").addEventListener("click", function(){
+
+        window.lib.getPosts()
+            .then((articles)=> {
+                console.log("articles", articles);
+                articleAll = articles;
+                articleAll.forEach(function(article){
+
+                    window.lib.getPosts()
+                        .then((comments)=> {
+                            if(undefined !== comments[article.id]) {
+                                article.comment = comments[article.id];
+                            }
+                        })
+                })
+            })
+
+        .then((result)=>{
+            console.log("The result", articleAll);
+        });
+
+
+
+
+
+    })
 })();
