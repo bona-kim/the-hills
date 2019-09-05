@@ -11,8 +11,6 @@
 
 (() => {
 
-    // If the button is clicked
-    document.getElementById("run").addEventListener("click", function () {
 
         // ask json file to the server and then Once it is ready,
         fetch('http://localhost:63342/the-hills/js-complete-course/_shared/api.json')
@@ -25,8 +23,10 @@
             // run the function
             .then(function (data) {
                 console.log(data);   // to check data in json file
+                // If the button is clicked
+                document.getElementById("run").addEventListener("click", function () {
 
-                // get the id from the form
+                    // get the id from the form
                 let inputName = document.getElementById("hero-name").value;
                 let inputAlterEgo = document.getElementById("hero-alter-ego").value;
                 let inputPower = document.getElementById("hero-powers").value;
