@@ -17,7 +17,7 @@
            SetInterval has also 2 parameters
             - 1st para is The function that will be executed.
               In this case, "() => console.log(`${label}:`, ++count)"
-                     the function displays msg 'label : count(after adding 1' in the console.
+                     the function displays msg 'label : count(after adding 1) in the console.
             - 2nd para is "delay" <- The intervals (in milliseconds) on how often to execute the code
         */
     };
@@ -29,7 +29,7 @@
     document.getElementById("run").addEventListener("click", () => {
         // if the array interval's length is not 0 = not empty
         if (intervals.length) {
-            // make all 5 intervals made stop
+            // make all 5 intervals stop
             intervals = intervals.filter(clearInterval);
             // up is same code with below
             // intervals.forEach(function(intervalNumber) {clearInterval(intervalNumber);})
