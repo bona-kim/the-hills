@@ -10,5 +10,21 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    document.getElementById("run").addEventListener("click", function(){
+
+            window.lib.getPosts().then(function(posts){
+                console.log(posts);
+            });
+
+
+    })
 })();
+
+
+/*
+
+Important : Need to check which implementation is used. You can check it in index.html
+            It was not callback.js but promise.js!!!
+
+            */
