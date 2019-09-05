@@ -13,7 +13,7 @@
 
     // At the click of the button,
     document.getElementById("run").addEventListener("click", function(){
-        console.log("clicked");
+
         // call the getPersons function
         window.lib.getPersons(function(error, people) {
             if(people == undefined){
