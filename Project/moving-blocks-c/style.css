@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+}
+body{
+    height: 100%;
+}
+
+#title{
+    background-color: #A23B72;
+    height: 10vw;
+}
+#general-status{
+    background-color: bisque;
+    height: 10vw;
+}
+#btn-start{
+
+}
+
+img{
+    width: 2rem;
+}
+
+#game-table{
+    border-color: darkblue;
+    }
+
+#game-status{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    background-color: #d4defe;
+}
+#time{
+    text-align: center;
+}
+#lives-panel{
+    text-align: center;
+}
+#game-field{
+    background-color: #c0fbb7;
+    height: 50vw;
+}
+
+#player{
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    top : 100px;
+    left : 100px;
+}
+
+.enemy{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+}
+
+#authors{
+    background-color: dimgrey;
+    height: 5vw;
+}
+

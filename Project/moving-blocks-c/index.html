@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moving-Blocks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--Game title-->
+<h1 id="title">Move Move!</h1>
+
+<!--General status-->
+<div id="general-status">
+    <p id="announcement" > Click the button / Press enter to start!</p>
+    <button id="btn-start" type="button" value="start">START</button>
+</div>
+
+
+<!--Game table-->
+<div id="game-table">
+
+    <div id="game-status">
+        <!--time-->
+        <div id="time">0 sec</div>   <!--Show the time since the start how long he survived.-->
+        <!--Lives-->
+        <div id="lives-panel">
+            <img src="assets/heart.png" alt="heart">
+            <img src="assets/heart.png" alt="heart">
+            <img src="assets/heart.png" alt="heart">
+        </div>  <!--Display lives When the player square hits the other squares he loses a life (3 lives) and when all his lives are gone he loses the game.-->
+    </div>
+
+    <div id="game-field">
+        <!--Have a square that you can move using the arrow keys.-->
+        <div id="player"></div>
+
+        <!--Have 4 other squares that move randomly around the screen.-->
+        <div class="enemy"></div>
+    </div>
+
+</div>
+
+<!--Authors-->
+<div id="authors">
+    Made/Written By Bona
+</div>
+
+<!--
+## Learning objectives
+- move DOM elements on the page
+- react to keypresses
+- collision detection
+
+## The Mission
+
+
+### Must-have features
+- Square that can be controlled
+- Chasing squares
+- Live mechanic
+
+### Nice-to-have features
+- Graphics instead of squares
+- How a visual timer to show the time that has elapsed
+- Make "food" squares spawn that give an extra life when picked up
+- Make a "god" square that makes the user immortal for the enemy squares.
+- Maybe over time spawn more enemy squares.
+- Go crazy
+
+-->
+
+
+<script src="script.js"></script>
+</body>
+</html>
